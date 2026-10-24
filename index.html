@@ -1,0 +1,794 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Instalación</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="webnoeICO.ico" rel="shortcut icon" type="image/x-icon">
+<link href="fontawesome6.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&700,400&display=swap" rel="stylesheet">
+<link href="webnoe.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-3.7.1.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="wb.carousel.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script src="wb.animatesvg.min.js"></script>
+<script src="wwb19.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(event)
+{
+   var headerMenu_dropdownToggle = document.querySelectorAll('#headerMenu .dropdown-toggle');
+   headerMenu_dropdownToggle.forEach(item => 
+   {
+      var dropdown = new bootstrap.Dropdown(item, {popperConfig:{placement:item.getAttribute('data-bs-placement')}});
+   });
+   var headerMenu_dropdown = document.querySelectorAll('#headerMenu .dropdown');
+   headerMenu_dropdown.forEach(item => 
+   {
+      item.addEventListener('shown.bs.dropdown', function(e)
+      {
+         e.currentTarget.classList.add('show');
+      });
+      item.addEventListener('hidden.bs.dropdown', function(e)
+      {
+         e.currentTarget.classList.remove('show');
+      });
+   });
+   var aboutCarousel = new bootstrap.Carousel('#aboutCarousel', {interval: 3000, pause: false});
+});
+</script>
+<script>
+$(document).ready(function()
+{
+   function skrollrInit()
+   {
+      skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+   }
+   skrollrInit();
+   var Carousel1Opts =
+   {
+      delay: 3000,
+      duration: 500,
+      easing: 'linear',
+      mode: 'forward-circular',
+      direction: '',
+      scalemode: 3,
+      pagination: true,
+      pause: null,
+      start: 0
+   };
+   $("#Carousel1").on('beforeActivate', function(event, index)
+   {
+      switch(index)
+      {
+            case 0:
+               AnimateCss('wb_Title1', 'transform-scale-in', 600, 600);
+               AnimateCss('wb_Description1', 'transform-lightspeed-in', 600, 800);
+               backgroundZoom('Carousel1', 'frame-1');;
+               break;
+            case 1:
+               AnimateCss('wb_Title2', 'transform-scale-in', 600, 600);
+               AnimateCss('wb_Description2', 'transform-lightspeed-in', 600, 800);
+               backgroundZoom('Carousel1', 'frame-2');;
+               break;
+            case 2:
+               AnimateCss('wb_Title3', 'transform-scale-in', 600, 600);
+               AnimateCss('wb_Description3', 'transform-lightspeed-in', 600, 800);
+               backgroundZoom('Carousel1', 'frame-3');;
+               break;
+            case 3:
+               AnimateCss('wb_Title4', 'transform-scale-in', 600, 600);
+               AnimateCss('wb_Description4', 'transform-lightspeed-in', 600, 800);
+               backgroundZoom('Carousel1', 'frame-4');;
+               break;
+      }
+   });
+   $("#Carousel1").carousel(Carousel1Opts);
+   $("#Carousel1_back a").click(function()
+   {
+      $('#Carousel1').carousel('prev');
+   });
+   $("#Carousel1_next a").click(function()
+   {
+      $('#Carousel1').carousel('next');
+   });
+   $("a[href*='#facts']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_facts').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#LayoutGrid8']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid8').offset().top }, 600, 'linear');
+   });
+   $("a[href*='#LayoutGrid3']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid3').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("#ClipArt5").animatesvg(
+   {
+      delay: 200,
+      duration: 2000,
+      easing: 'linear',
+      loop: true
+   });
+   $("#ClipArt5").animatesvg('animate');
+   $("#ClipArt6").animatesvg(
+   {
+      delay: 200,
+      duration: 2000,
+      easing: 'linear',
+      loop: true
+   });
+   $("#ClipArt6").animatesvg('animate');
+   $("#ClipArt7").animatesvg(
+   {
+      delay: 200,
+      duration: 2000,
+      easing: 'linear',
+      loop: true
+   });
+   $("#ClipArt7").animatesvg('animate');
+   $("a[href*='#LayoutGrid7']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid7').offset().top-88 }, 600, 'easeOutCirc');
+   });
+   $("#ClipArt1").animatesvg(
+   {
+      delay: 200,
+      duration: 2000,
+      easing: 'linear',
+      loop: true
+   });
+   $("#ClipArt1").animatesvg('animate');
+   $("#ClipArt2").animatesvg(
+   {
+      delay: 200,
+      duration: 2000,
+      easing: 'linear',
+      loop: true
+   });
+   $("#ClipArt2").animatesvg('animate');
+   $("#ClipArt3").animatesvg(
+   {
+      delay: 200,
+      duration: 2000,
+      easing: 'linear',
+      loop: true
+   });
+   $("#ClipArt3").animatesvg('animate');
+   $("a[href*='#coffee']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#coffee').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#about']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_about').offset().top }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#LayoutGrid2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid2').offset().top }, 600, 'linear');
+   });
+   $("a[href*='#LayoutGrid9']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid9').offset().top-88 }, 600, 'easeOutExpo');
+   });
+   $("a[href*='#galleryLayoutGrid1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_galleryLayoutGrid1').offset().top }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#galleryLayoutGrid2']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_galleryLayoutGrid2').offset().top-68 }, 600, 'easeOutCirc');
+   });
+   $("a[href*='#LayoutGrid6']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid6').offset().top }, 600, 'easeOutExpo');
+   });
+});
+</script>
+<script>
+function backgroundZoom(id, frame)
+{
+   var backgroundProps = ["background-image", "background-position", "background-repeat", "background-size"];
+   var props = $('#' + id + ' .' + frame).css(backgroundProps);
+   $('#background-zoom').remove();
+   var $obj = $('<div id="background-zoom" style="width:100%;height:110%"></div>');
+   $obj.css(props);
+   $('#' + id + ' .' + frame).prepend($obj);
+   AnimateCss('background-zoom', 'background-zoom', 0, 10000);
+}
+</script>
+</head>
+<body>
+<div id="PageHeader1" data-top="width:80%;left:10%;top:20px;" data--10-top="width:100%;left:0%;top:0px;">
+<div id="PageHeader1_Container">
+<div id="wb_logo2">
+<img src="webnoeICO.ico" id="logo2" alt="" width="64" height="64"></div>
+<div id="wb_headerMenu">
+<div id="headerMenu" class="headerMenu" style="width:100%;height:auto !important;">
+<div class="container">
+<div class="navbar-header">
+<button title="" type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".headerMenu-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="headerMenu-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="nav-item">
+<a href="./index.html" class="nav-link">Inicio</a>
+</li>
+<li class="nav-item">
+<a href="#about" class="nav-link">Nosotros</a>
+</li>
+<li class="nav-item">
+<a href="#facts" class="nav-link">Software</a>
+</li>
+<li class="nav-item">
+<a href="#about" class="nav-link">Hardware</a>
+</li>
+<li class="nav-item">
+<a href="#LayoutGrid6" class="nav-link">Contacto</a>
+</li>
+</ul>
+</div>
+</div>
+</div></div>
+<div id="wb_Heading3">
+<h3 id="Heading3">¡Llámanos <br>22-92-22-28-15</h3></div>
+<div id="wb_headerIcon1">
+<a href="https://api.whatsapp.com/send?phone=5212292222815"><div id="headerIcon1"><i class="fa fa-brands fa-whatsapp"></i></div></a></div>
+</div>
+</div>
+
+<div id="wb_Carousel1">
+<div id="Carousel1">
+<div class="frame frame-1">
+<div class="carousel-item-inner">
+<div id="wb_Title1">
+<h1 id="Title1">Windows 11 Pro</h1></div>
+<div id="wb_Description1">
+<h2 id="Description1">UEFI MBR 64 Bits</h2></div>
+</div>
+</div>
+<div class="frame frame-2">
+<div class="carousel-item-inner">
+<div id="wb_Title2">
+<h1 id="Title2">Antivirus</h1></div>
+<div id="wb_Description2">
+<h2 id="Description2">Malware, Spyware, Troyanos, Rootkits</h2></div>
+</div>
+</div>
+<div class="frame frame-3">
+<div class="carousel-item-inner">
+<div id="wb_Title3">
+<h1 id="Title3">Respaldo de Información </h1></div>
+<div id="wb_Description3">
+<h2 id="Description3">Herramientas de Rescate</h2></div>
+</div>
+</div>
+<div class="frame frame-4">
+<div class="carousel-item-inner">
+<div id="wb_Title4">
+<h1 id="Title4">¿ Cómo te podemos ayudar ?</h1></div>
+<div id="wb_Description4">
+<h2 id="Description4">Consulta que podemos hacer por tí</h2></div>
+</div>
+</div>
+</div>
+<div id="Carousel1_back"><a><img alt="Back" width="20" height="30" src="images/arrow-prev-white.png"></a></div>
+<div id="Carousel1_next"><a><img alt="Next" width="20" height="30" src="images/arrow-next-white.png"></a></div>
+</div>
+<div id="wb_facts">
+<div id="facts">
+<div class="row">
+<div class="col-1">
+<div id="wb_Icon6">
+<div id="Icon6"><i class="fa fa-brands fa-windows"></i></div>
+</div>
+<table id="Table4">
+<tr>
+<td class="cell0"><span style="color:#FFFFE0;font-family:Arial;font-size:16px;">Sistemas Operativos <br>Windows </span></td>
+</tr>
+<tr>
+<td class="cell1"></td>
+</tr>
+</table>
+</div>
+<div class="col-2">
+<div id="wb_Icon7">
+<div id="Icon7"><i class="fa fa-regular fa-file-excel"></i></div>
+</div>
+<table id="Table5">
+<tr>
+<td class="cell0"><span style="color:#FFFFE0;font-family:Arial;font-size:16px;">Suite Microsoft Office<br>Productos Adobe</span></td>
+</tr>
+<tr>
+<td class="cell1"><span style="color:#000000;font-family:Arial;font-size:13px;">&nbsp; </span></td>
+</tr>
+</table>
+</div>
+<div class="col-3">
+<div id="wb_Icon5">
+<div id="Icon5"><i class="fa fa-pen-nib"></i></div>
+</div>
+<table id="Table6">
+<tr>
+<td class="cell0"><span style="color:#FFFFE0;font-family:Arial;font-size:16px;">Instalación y configuración de cámaras de seguridad</span></td>
+</tr>
+<tr>
+<td class="cell1"><span style="color:#000000;font-family:Arial;font-size:13px;">&nbsp; </span></td>
+</tr>
+</table>
+</div>
+<div class="col-4">
+<div id="wb_Icon8">
+<div id="Icon8"><i class="fa fa-computer"></i></div>
+</div>
+<table id="Table7">
+<tr>
+<td class="cell0"><span style="color:#FFFFE0;font-family:Arial;font-size:16px;">Limpieza de Hardware <br>Laptop | PC | All in one</span></td>
+</tr>
+<tr>
+<td class="cell1"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="upStickyLayer">
+<div id="wb_upIcon">
+<a href="./index.html"><div id="upIcon"><i class="fa fa-angle-up"></i></div></a></div>
+</div>
+<div id="wb_LayoutGrid8">
+<div id="LayoutGrid8">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text4">
+<span style="color:#FFF0F5;font-family:Arial;font-size:32px;"><strong>SERVICIOS</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_ClipArt5">
+<a href="javascript:popupwnd('https://anydesk.com/es/downloads/windows','no','no','no','no','no','no','','','','')" target="_self"><svg id="ClipArt5" height="100%" width="100%" viewBox="0 0 52 48" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="ClipArt5-shape" d="M47 0 L5 0 C3 0, 2 1, 1 2 C0 2, 0 4, 0 5 L0 25 L5 25 L5 5 L47 5 L47 45 C49 45, 50 45, 51 44 C52 43, 52 42, 52 40 L52 5 C52 4, 52 2, 51 2 C50 1, 49 0, 47 0 Z M10 18 C10 16, 10 14, 11 13 C12 11, 13 10, 14 9 C16 8, 17 8, 19 8 C21 8, 22 8, 24 9 C25 10, 26 11, 27 13 C28 14, 28 16, 28 18 C28 20, 28 21, 27 23 C26 24, 25 26, 24 26 C22 27, 21 28, 19 28 C17 28, 16 27, 14 26 C13 26, 12 24, 11 23 C10 21, 10 20, 10 18 Z M34 34 C32 33, 30 32, 27 31 C25 31, 22 30, 19 30 C16 30, 13 31, 11 31 C8 32, 6 33, 4 34 C3 35, 2 36, 1 37 C0 38, 0 40, 0 41 L0 48 L38 48 L38 41 C38 40, 38 38, 37 37 C36 36, 35 35, 34 34" vector-effect="non-scaling-stroke" />
+</defs>
+<use xlink:href="#ClipArt5-shape" data-href="#ClipArt5-shape" style="fill:none;stroke:#1E90FF;stroke-width:2"/>
+</svg>
+</a>
+</div>
+<div id="wb_Card4" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+<div id="Card4-card-body">
+<div id="Card4-card-item0">Asistencia Remota</div>
+<div id="Card4-card-item1">Soporte técnico remoto, nos conectamos para controlar su ordenador de forma virtual. El usuario autoriza al técnico a establecer una conexión de acceso remoto en su dispositivo.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_ClipArt6">
+<svg id="ClipArt6" height="100%" width="100%" viewBox="0 0 52 48" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="ClipArt6-shape" d="M21 25 L21 44 L0 41 L0 25Z  M21 4 L21 23 L0 23 L0 7Z  M52 25 L52 48 L24 44 L24 25Z  M52 0 L52 23 L24 23 L24 4Z " vector-effect="non-scaling-stroke" />
+</defs>
+<use xlink:href="#ClipArt6-shape" data-href="#ClipArt6-shape" style="fill:none;stroke:#1E90FF;stroke-width:2"/>
+</svg>
+
+</div>
+<div id="wb_Card5" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+<div id="Card5-card-body">
+<div id="Card5-card-item0">Software</div>
+<div id="Card5-card-item1">Ofrecemos Instalación  de programas de uso más común: Windows, Paquetería Office, Antivirus, Aplicaciones, Telemetria</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_ClipArt7">
+<svg id="ClipArt7" height="100%" width="100%" viewBox="0 0 52 48" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="ClipArt7-shape" d="M7 41 L26 41 L26 27 L7 27Z  M33 27 L46 27 L46 7 L26 7 L26 14 L28 14 C30 14, 31 14, 31 15 C32 16, 33 17, 33 18 Z M52 4 L52 30 C52 31, 52 32, 51 33 C50 34, 49 34, 48 34 L33 34 L33 44 C33 45, 32 46, 31 47 C31 48, 30 48, 28 48 L4 48 C3 48, 2 48, 1 47 C0 46, 0 45, 0 44 L0 18 C0 17, 0 16, 1 15 C2 14, 3 14, 4 14 L19 14 L19 4 C19 3, 20 2, 21 1 C21 0, 22 0, 24 0 L48 0 C49 0, 50 0, 51 1 C52 2, 52 3, 52 4" vector-effect="non-scaling-stroke" />
+</defs>
+<use xlink:href="#ClipArt7-shape" data-href="#ClipArt7-shape" style="fill:none;stroke:#1E90FF;stroke-width:2"/>
+</svg>
+
+</div>
+<div id="wb_Card6" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+<div id="Card6-card-body">
+<div id="Card6-card-item0">Respaldo de Información "Backup"</div>
+<div id="Card6-card-item1">La importancia radica en que todos los dispositivos de almacenamiento masivo de información tienen la posibilidad de fallar, por lo tanto es necesario que se cuente con una copia de seguridad</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid7">
+<div id="LayoutGrid7">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_ClipArt1">
+<svg id="ClipArt1" height="100%" width="100%" viewBox="0 0 52 48" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="ClipArt1-shape" d="M22 29 C24 28, 24 26, 24 24 C24 22, 24 20, 22 19 C21 18, 19 17, 17 17 C15 17, 14 18, 12 19 C11 20, 10 22, 10 24 C10 26, 11 28, 12 29 C14 30, 15 31, 17 31 C19 31, 21 30, 22 29 Z M45 38 C45 37, 45 36, 44 35 C43 35, 43 34, 42 34 C41 34, 40 35, 39 35 C39 36, 38 37, 38 38 C38 39, 39 40, 39 40 C40 41, 41 41, 42 41 C43 41, 43 41, 44 40 C45 40, 45 39, 45 38 Z M45 10 C45 9, 45 8, 44 8 C43 7, 43 7, 42 7 C41 7, 40 7, 39 8 C39 8, 38 9, 38 10 C38 11, 39 12, 39 12 C40 13, 41 14, 42 14 C43 14, 43 13, 44 12 C45 12, 45 11, 45 10 Z M35 22 L35 27 C35 27, 35 27, 34 27 C34 27, 34 27, 34 27 L30 28 C30 29, 29 29, 29 30 C30 31, 30 32, 31 33 C32 33, 32 34, 32 34 C32 34, 32 34, 31 34 C31 35, 30 36, 29 37 C28 38, 27 38, 27 38 C27 38, 27 38, 27 38 L23 36 C23 36, 22 36, 21 37 C21 38, 21 40, 21 41 C21 41, 20 41, 20 41 L15 41 C15 41, 14 41, 14 41 C14 41, 14 41, 14 41 L13 37 C13 36, 12 36, 11 36 L8 38 C8 38, 8 38, 8 38 C7 38, 7 38, 7 38 C4 36, 3 34, 3 34 C3 34, 3 33, 3 33 C3 33, 4 33, 4 32 C5 31, 5 31, 6 30 C5 29, 5 29, 5 28 L1 27 C0 27, 0 27, 0 27 C0 27, 0 27, 0 26 L0 21 C0 21, 0 21, 0 21 C0 21, 0 21, 1 21 L5 20 C5 19, 5 19, 6 18 C5 17, 4 16, 3 15 C3 15, 3 14, 3 14 C3 14, 3 14, 3 14 C4 13, 4 12, 5 11 C7 10, 7 10, 8 10 C8 10, 8 10, 8 10 L11 12 C12 12, 13 12, 13 11 C14 9, 14 8, 14 7 C14 7, 14 7, 15 7 L20 7 C20 7, 20 7, 20 7 C21 7, 21 7, 21 7 L21 11 C22 12, 23 12, 23 12 L27 10 C27 10, 27 10, 27 10 C27 10, 27 10, 28 10 C30 12, 32 14, 32 14 C32 14, 32 14, 31 15 C31 15, 31 16, 30 16 C30 17, 29 17, 29 18 C29 19, 30 19, 30 20 L34 21 C34 21, 34 21, 34 21 C35 21, 35 21, 35 22 Z M52 36 L52 40 C52 40, 51 40, 48 41 C48 41, 47 42, 47 42 C48 44, 49 45, 49 46 C49 46, 49 46, 48 46 C46 47, 45 48, 45 48 C45 48, 45 48, 44 47 C43 46, 43 45, 42 45 C42 45, 42 45, 42 45 C41 45, 41 45, 41 45 C41 45, 40 46, 39 47 C39 48, 38 48, 38 48 C38 48, 37 47, 35 46 C35 46, 35 46, 35 46 C35 45, 35 44, 36 42 C36 42, 35 41, 35 41 C33 40, 31 40, 31 40 L31 36 C31 36, 33 35, 35 35 C35 35, 36 34, 36 34 C35 32, 35 30, 35 30 C35 30, 35 30, 35 30 C35 30, 35 30, 36 29 C36 29, 37 29, 37 28 C38 28, 38 28, 38 28 C38 28, 39 28, 39 29 C40 30, 41 31, 41 31 C41 31, 41 31, 42 31 C42 31, 42 31, 42 31 C43 30, 44 29, 45 28 L45 28 C45 28, 46 29, 48 30 C49 30, 49 30, 49 30 C49 30, 48 32, 47 34 C47 34, 48 35, 48 35 C51 35, 52 36, 52 36 Z M52 8 L52 12 C52 12, 51 13, 48 13 C48 13, 47 14, 47 14 C48 16, 49 17, 49 18 C49 18, 49 18, 48 18 C46 19, 45 20, 45 20 C45 20, 45 20, 44 19 C43 18, 43 17, 42 17 C42 17, 42 17, 42 17 C41 17, 41 17, 41 17 C41 17, 40 18, 39 19 C39 20, 38 20, 38 20 C38 20, 37 19, 35 18 C35 18, 35 18, 35 18 C35 17, 35 16, 36 14 C36 14, 35 13, 35 13 C33 13, 31 12, 31 12 L31 8 C31 8, 33 8, 35 7 C35 7, 36 6, 36 6 C35 4, 35 3, 35 2 C35 2, 35 2, 35 2 C35 2, 35 2, 36 1 C36 1, 37 1, 37 0 C38 0, 38 0, 38 0 C38 0, 39 0, 39 1 C40 2, 41 3, 41 3 C41 3, 41 3, 42 3 C42 3, 42 3, 42 3 C43 2, 44 1, 45 0 L45 0 C45 0, 46 1, 48 2 C49 2, 49 2, 49 2 C49 3, 48 4, 47 6 C47 6, 48 7, 48 7 C51 8, 52 8, 52 8" vector-effect="non-scaling-stroke" />
+</defs>
+<use xlink:href="#ClipArt1-shape" data-href="#ClipArt1-shape" style="fill:none;stroke:#1E90FF;stroke-width:2"/>
+</svg>
+
+</div>
+<div id="wb_Card7" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+<div id="Card7-card-body">
+<div id="Card7-card-item0">Limpieza de Hardware </div>
+<div id="Card7-card-item1">Limpiamos con liquidos especiales a nivel componente del computador, aplicando pasta térmica de plata en el procesador. La reparación se realiza de manera minuciosa.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_ClipArt2">
+<svg id="ClipArt2" height="100%" width="100%" viewBox="0 0 62 52" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="ClipArt2-shape" d="M50 31 L50 10 L37 19 L37 10 L12 10 L12 31 L37 31 L37 23Z  M56 0 C58 0, 59 1, 60 2 C62 3, 62 4, 62 5 L62 36 C62 38, 62 39, 60 40 C59 41, 58 42, 56 42 L12 42 L0 52 L0 5 C0 4, 1 3, 2 2 C3 1, 4 0, 6 0" vector-effect="non-scaling-stroke" />
+</defs>
+<use xlink:href="#ClipArt2-shape" data-href="#ClipArt2-shape" style="fill:none;stroke:#FFA500;stroke-width:2"/>
+</svg>
+
+</div>
+<div id="wb_Card8" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+<div id="Card8-card-body">
+<div id="Card8-card-item0">Instalación de cámaras</div>
+<div id="Card8-card-item1">Instalación y configuración de videovigialancia. Nos enfocamos en cámaras IP. En forma de Domo, Tipo bala y Cube.<br></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<div class="col-3-padding">
+<div id="wb_ClipArt3">
+<svg id="ClipArt3" height="100%" width="100%" viewBox="0 0 52 48" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<defs>
+   <path id="ClipArt3-shape" d="M28 22 C26 21, 25 21, 24 20 C22 20, 22 19, 22 18 C22 17, 22 17, 23 16 C23 16, 24 15, 24 15 C25 15, 26 15, 26 15 C27 15, 28 15, 29 16 C29 16, 30 16, 30 17 C30 17, 31 17, 31 18 L34 16 C34 16, 34 16, 34 15 C33 14, 33 13, 32 13 C31 12, 30 12, 28 11 L28 9 L24 9 L24 11 C22 12, 21 12, 20 13 C19 14, 19 14, 19 15 C18 16, 18 17, 18 17 C18 18, 18 18, 18 18 C18 19, 18 20, 19 21 C19 22, 20 23, 21 23 C22 24, 23 24, 23 24 C24 25, 25 25, 26 25 C28 26, 29 26, 30 27 C31 28, 31 29, 31 30 C31 31, 31 32, 30 32 C29 33, 27 33, 26 33 C25 33, 24 33, 24 32 C23 32, 22 32, 22 31 C22 30, 21 30, 21 29 C21 29, 21 29, 21 29 L17 30 C17 32, 18 33, 19 34 C20 35, 21 35, 22 36 C23 36, 23 36, 24 37 L24 39 L28 39 L28 37 C29 37, 29 36, 30 36 C31 36, 31 36, 32 35 C33 35, 34 34, 34 33 C35 32, 35 31, 35 30 C35 28, 35 27, 34 25 C33 24, 31 23, 28 22 Z M5 44 L0 44 L0 31 L14 31 L14 35 L8 35 C10 38, 13 40, 16 41 C19 43, 22 44, 26 44 C29 44, 32 43, 34 42 C37 41, 39 40, 41 38 C43 36, 45 34, 46 32 C47 29, 47 27, 47 24 L52 24 C52 27, 51 30, 50 33 C49 36, 47 39, 44 41 C42 43, 39 45, 36 46 C33 47, 30 48, 26 48 C22 48, 18 47, 14 45 C10 43, 7 41, 5 38 Z M0 24 C0 21, 1 18, 2 15 C3 12, 5 9, 8 7 C10 5, 13 3, 16 2 C19 1, 22 0, 26 0 C30 0, 35 1, 38 3 C42 5, 45 7, 47 10 L47 4 L52 4 L52 17 L38 17 L38 13 L44 13 C42 10, 39 8, 36 7 C33 5, 30 4, 26 4 C23 4, 20 5, 18 6 C15 7, 13 8, 11 10 C9 12, 8 14, 6 16 C5 19, 5 21, 5 24" vector-effect="non-scaling-stroke" />
+</defs>
+<use xlink:href="#ClipArt3-shape" data-href="#ClipArt3-shape" style="fill:none;stroke:#1E90FF;stroke-width:2"/>
+</svg>
+
+</div>
+<div id="wb_Card9" class="card" data--250-bottom="transform: scale(1.0,1.0);" data-333-bottom="transform: scale(0.5,0.5);">
+<div id="Card9-card-body">
+<div id="Card9-card-item0">Venta de equipo tecnológico</div>
+<div id="Card9-card-item1">Venta de equipos nuevos desde computadoras, hardware, Laptops, Monitores, periféricos Impresoras,  hasta dispositivos de loT.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_coffee">
+<div id="coffee">
+<div id="wb_coffeeCard1" class="card">
+<div id="coffeeCard1-card-body">
+<img id="coffeeCard1-card-item0" src="images/respaldo izquierda.jpg" width="626" height="626" alt="" title="">
+<div id="coffeeCard1-card-item1">Respaldo / Backup</div>
+<div id="coffeeCard1-card-item2"><i class="coffee"></i></div>
+<hr id="coffeeCard1-card-item3">
+<div id="coffeeCard1-card-item4">Una computadora con virus puede ocasionar la pérdida de archivos personales, videos, fotos, biblioteca de música y documentos importantes que serían difíciles de recuperar</div>
+<div id="coffeeCard1-card-item5"><a href="https://api.whatsapp.com/send?phone=5212292222815">Leer más >></a></div>
+</div>
+</div>
+<div id="wb_coffeeCard2" class="card">
+<div id="coffeeCard2-card-body">
+<img id="coffeeCard2-card-item0" src="images/LA MISMA TAMAÑO.jpg" width="464" height="464" alt="" title="">
+<div id="coffeeCard2-card-item1">Mantenimiento Preventivo y Correctivo</div>
+<div id="coffeeCard2-card-item2"><i class="coffee"></i></div>
+<hr id="coffeeCard2-card-item3">
+<div id="coffeeCard2-card-item4">Programe una limpieza pronto y evite el daño y sobrecalentamiento en el procesador de su computadora.<br>Mejore el rendimiento del sistema o evite que su equipo se congele o se apague inesperadamente.<br></div>
+<div id="coffeeCard2-card-item5"><a href="https://api.whatsapp.com/send?phone=5212292222815">Leer más >></a></div>
+</div>
+</div>
+<div id="wb_coffeeCard3" class="card">
+<div id="coffeeCard3-card-body">
+<img id="coffeeCard3-card-item0" src="images/IZQUIERDO.jpg" width="720" height="720" alt="" title="">
+<div id="coffeeCard3-card-item1">Conexión a redes y El Internet de las Cosas (loT)</div>
+<div id="coffeeCard3-card-item2"><i class="coffee"></i></div>
+<hr id="coffeeCard3-card-item3">
+<div id="coffeeCard3-card-item4">Evita el sobrecalentamiento, Alarga la vida del ordenador, Mejora el rendimiento del sistema.</div>
+<div id="coffeeCard3-card-item5"><a href="https://api.whatsapp.com/send?phone=5212292222815">Leer más >></a></div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_about">
+<div id="about">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_aboutText">
+<p style="font-size:19px;line-height:21px;font-weight:bold;">Soluciones en informática para hogar / Usuario</p>
+<p style="font-size:32px;line-height:36px;font-weight:bold;">&nbsp;</p>
+<p style="font-weight:bold;">&nbsp;</p>
+<p style="font-size:19px;line-height:21px;">Instalación, reparación y configuración confiable, para prevenir futuras averías físicas o lógicas<span style="color:#1E90FF;">.</span></p>
+<p style="font-size:13px;line-height:16px;">&nbsp;</p>
+<p style="font-size:13px;line-height:16px;">&nbsp;</p>
+</div>
+<a id="aboutButton" href="">Read More</a>
+<div id="wb_introIcon">
+<a href="https://api.whatsapp.com/send?phone=5212292222815"><div id="introIcon"><i class="fa fa-chalkboard-user"></i></div></a>
+</div>
+</div>
+</div>
+<div class="col-2">
+<div class="col-2-padding">
+<div id="wb_aboutCarousel">
+<div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+<ol class="carousel-indicators">
+<li data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></li>
+<li data-bs-target="#aboutCarousel" data-bs-slide-to="1"></li>
+<li data-bs-target="#aboutCarousel" data-bs-slide-to="2"></li>
+<li data-bs-target="#aboutCarousel" data-bs-slide-to="3"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="carousel-item-inner">
+<div id="wb_aboutCard1" class="card">
+<div id="aboutCard1-card-body">
+<div id="aboutCard1-card-item0"><i class="quote-right"></i></div>
+<div id="aboutCard1-card-item1">"Nuestros clientes nos respaldan"</div>
+<img id="aboutCard1-card-item2" src="webnoeICO.ico" width="128" height="128" alt="" title="">
+<div id="aboutCard1-card-item3">.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-item-inner">
+<div id="wb_aboutCard2" class="card">
+<div id="aboutCard2-card-body">
+<div id="aboutCard2-card-item0"><a href="http://www.wysiwygwebbuilder.com/purchase.html"><i class="quote-right"></i></a></div>
+<div id="aboutCard2-card-item1">"Garantía en nuestros soportes"</div>
+<img id="aboutCard2-card-item2" src="webnoeICO.ico" width="128" height="128" alt="" title="">
+<div id="aboutCard2-card-item3">.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-item-inner">
+<div id="wb_aboutCard3" class="card">
+<div id="aboutCard3-card-body">
+<div id="aboutCard3-card-item0"><a href="http://www.wysiwygwebbuilder.com/purchase.html"><i class="quote-right"></i></a></div>
+<div id="aboutCard3-card-item1">"Servicio Excelente"</div>
+<img id="aboutCard3-card-item2" src="webnoeICO.ico" width="128" height="128" alt="" title="">
+<div id="aboutCard3-card-item3">Web Noé</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="carousel-item-inner">
+<div id="wb_aboutCard4" class="card">
+<div id="aboutCard4-card-body">
+<div id="aboutCard4-card-item0"><a href="http://www.wysiwygwebbuilder.com/purchase.html"><i class="quote-right"></i></a></div>
+<div id="aboutCard4-card-item1">"Soluciones técnicas"</div>
+<img id="aboutCard4-card-item2" src="webnoeICO.ico" width="128" height="128" alt="" title="">
+<div id="aboutCard4-card-item3">.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text6">
+<span style="color:#F0FFF0;font-family:Arial;font-size:32px;"><strong>SOFTWARE</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+<hr id="space-line1">
+<div id="wb_Card2" class="card">
+<div id="Card2-card-header">Windows Pro</div>
+<div id="Card2-card-body">
+<hr id="Card2-card-item1">
+<div id="Card2-card-item2"><a href="https://api.whatsapp.com/send?phone=5212292222815">Activa Ahora</a></div>
+</div>
+</div>
+</div>
+<div class="col-2">
+<hr id="space-line2">
+<div id="wb_Card1" class="card">
+<div id="Card1-card-header">Refacciones</div>
+<div id="Card1-card-body">
+<hr id="Card1-card-item1">
+<div id="Card1-card-item2"><a href="https://api.whatsapp.com/send?phone=5212292222815" target="_blank">¡Solicítalas!</a></div>
+</div>
+</div>
+</div>
+<div class="col-3">
+<hr id="space-line3">
+<div id="wb_Card3" class="card">
+<div id="Card3-card-header">Office 365 / 2024</div>
+<div id="Card3-card-body">
+<hr id="Card3-card-item1">
+<div id="Card3-card-item2"><a href="https://api.whatsapp.com/send?phone=5212292222815">Activa Ahora</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid9">
+<div id="LayoutGrid9">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_Icon2">
+<div id="Icon2"><i class="fa fa-laptop"></i></div>
+</div>
+<div id="wb_Heading1">
+<h1 id="Heading1">SOPORTE TECNICO TI</h1>
+</div>
+<div id="wb_Text5">
+<p>¡SOMOS LA MEJORA EN EQUIPOS DE BAJOS RECURSOS, </p>
+<p>! SE PUEDEN OPTIMIZAR !</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_galleryLayoutGrid1">
+<div id="galleryLayoutGrid1-overlay"></div>
+<div id="galleryLayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div class="col-1-padding">
+<div id="wb_galleryHeading">
+<h2 id="galleryHeading">Our Gallery</h2>
+</div>
+<hr id="galleryLine1">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_galleryLayoutGrid2">
+<div id="galleryLayoutGrid2-overlay"></div>
+<div id="galleryLayoutGrid2">
+<div class="row">
+<div class="col-1">
+<div id="wb_galleryImage1">
+<a href="https://drive.google.com/file/d/1KfHnDHZRyjH7rtEzEuUq0TWq1-ZLcBxf/view?usp=sharing"><img src="images/SECRETO ATRAC.jpg" id="galleryImage1" alt="" width="242" height="241"></a>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_galleryImage2">
+<img src="images/Mantenimiento.png" id="galleryImage2" alt="" width="242" height="242">
+</div>
+</div>
+<div class="col-3">
+<div id="wb_galleryImage3">
+<img src="images/TAMAÑO NORMAL U.jpg" id="galleryImage3" alt="" width="242" height="244">
+</div>
+</div>
+<div class="col-4">
+<div id="wb_galleryImage4">
+<img src="images/IZQUIERDA 4.jpg" id="galleryImage4" alt="" width="242" height="242">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid6">
+<form name="LayoutGrid6" method="post" action="<?php echo basename(__FILE__); ?>" enctype="multipart/form-data" id="LayoutGrid6">
+<div class="row">
+<div class="col-1">
+<label for="Card8" id="contactLabel1">Cómo Te Podemos Ayudar ?</label>
+<div id="wb_contactIcon1">
+<a href="./index.html"><div id="contactIcon1"><i class="fa fa-rss"></i></div></a>
+</div>
+<div id="wb_contactIcon2">
+<a href="./index.html"><div id="contactIcon2"><i class="fa fa-brands fa-facebook"></i></div></a>
+</div>
+<div id="wb_contactIcon3">
+<a href="https://api.whatsapp.com/send?phone=5212292222815"><div id="contactIcon3"><i class="fa fa-brands fa-whatsapp"></i></div></a>
+</div>
+<label for="Card8" id="contactLabel4">Address</label>
+<div id="wb_contactAddress">
+<p>#28, 3nd floor </p>
+<p>Phone: 2292222815</p>
+<p>Email: soportewebnoe@gmail.com</p>
+</div>
+</div>
+<div class="col-2">
+<div id="wb_contactLabel2">
+<h3 id="contactLabel2">Visit our shop</h3>
+</div>
+<table id="contactTable">
+<tr>
+<td class="cell0"><p><span style="font-weight:bold;">Monday</span></p></td>
+<td class="cell1"><p>10:00 - 18:00</p></td>
+</tr>
+<tr>
+<td class="cell2"><p><span style="font-weight:bold;">Tuesday</span></p></td>
+<td class="cell3"><p>10:00 - 18:00</p></td>
+</tr>
+<tr>
+<td class="cell4"><p><span style="font-weight:bold;">Wednesday</span></p></td>
+<td class="cell5"><p>10:00 - 18:00</p></td>
+</tr>
+<tr>
+<td class="cell6"><p><span style="font-weight:bold;">Thursday</span></p></td>
+<td class="cell7"><p>10:00 - 18:00</p></td>
+</tr>
+<tr>
+<td class="cell8"><p><span style="font-weight:bold;">Friday</span></p></td>
+<td class="cell9"><p>10:00 - 18:00</p></td>
+</tr>
+<tr>
+<td class="cell10"><p><span style="font-weight:bold;">Saturday</span></p></td>
+<td class="cell11"><p>10:00 - 18:00</p></td>
+</tr>
+<tr>
+<td class="cell12"><p><span style="font-weight:bold;">Sunday</span></p></td>
+<td class="cell13"><p>Closed</p></td>
+</tr>
+</table>
+</div>
+<div class="col-3">
+<label for="Card8" id="contactLabel3">Contact Us</label>
+<input type="text" id="contactName" name="name" value="" spellcheck="false" placeholder="Name">
+<input type="text" id="contactEmail" name="email" value="" spellcheck="false" placeholder="Email">
+<textarea name="message" id="contactMessage" rows="2" cols="25" autocomplete="off" spellcheck="false" placeholder="Message"></textarea>
+<input type="submit" id="contactButton" name="" value="Send">
+</div>
+</div>
+</form>
+</div>
+</body>
+</html>
